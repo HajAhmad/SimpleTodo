@@ -5,4 +5,4 @@ Here are the list of supported APIs:
 
    * AsyncTask
 
-The more APIs and Archs are on their ways.
+More APIs and Archs are on the way.
