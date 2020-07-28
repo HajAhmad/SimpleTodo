@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/item_important"
+        android:title="نمایش مهم ها" />
+    <item
+        android:id="@+id/item_active"
+        android:title="نمایش فعال ها" />
+    <item
+        android:id="@+id/item_done"
+        android:title="نمایش انجام شده" />
+    <item
+        android:id="@+id/item_all"
+        android:title="نمایش همه" />
+</menu>

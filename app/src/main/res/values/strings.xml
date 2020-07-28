@@ -1,0 +1,24 @@
+<resources>
+
+    <string name="app_name">لیست کارها</string>
+
+    <string name="activity_main_empty_message">کاری تعریف نشده، برای تعریف کار بر روی من ضربه بزنید.</string>
+    <string name="action_filter_title">فیلتر</string>
+    <string name="action_delete_title">حذف</string>
+    <string name="mark_as_important_title">علامت زدن به عنوان مهم</string>
+    <string name="mark_as_not_important_title">علامت زدن به عنوان غیر مهم</string>
+    <string name="title_title">عنوان</string>
+    <string name="description_title">توضیحات</string>
+    <string name="edit_task_title">ویرایش کار</string>
+    <string name="add_task_title">افزودن کار</string>
+    <string name="empty_title_message">باید یک عنوان تعیین نمایید.</string>
+    <string name="deselect_title">حذف انتخاب</string>
+    <string name="save_title">ذخیره</string>
+    <string name="mark_as_not_done_title">علامت زدن به عنوان فعال</string>
+    <string name="mark_as_done_title">علامت زدن به عنوان انجام شده</string>
+    <string name="return_title">بازگشت</string>
+    <string name="no_important_task_message">هیچ کار مهمی نداری.</string>
+    <string name="no_done_task_message">هیچ کاری رو تموم نکردی! :|</string>
+    <string name="no_active_task_message">هیچ کار انجام نشده ای نداری! :)</string>
+
+</resources>
