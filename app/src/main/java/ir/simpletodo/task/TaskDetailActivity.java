@@ -88,13 +88,10 @@ public class TaskDetailActivity extends AppCompatActivity {
 
             removeAction.setVisibility(View.VISIBLE);
             removeAction.setOnClickListener(v -> {
-                new DbAsyncOps.DeleteTask(this, effectedRow -> {
                     setResult(ACTION_DELETE_CODE, new Intent() {{
                         putExtra(_key_task_id, mTaskId);
                     }});
-
                     finish();
-                }).execute(mTaskId);
             });
 
         } else {

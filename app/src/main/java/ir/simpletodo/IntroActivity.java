@@ -22,6 +22,7 @@ public class IntroActivity extends Activity {
             @Override
             public void onFinish() {
                 startActivity(new Intent(IntroActivity.this, MainActivity.class));
+                finish();
             }
         }.start();
     }

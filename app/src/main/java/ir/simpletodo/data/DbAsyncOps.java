@@ -98,9 +98,9 @@ public final class DbAsyncOps {
 
         @Override
         protected final Integer doInBackground(Long... ids) {
-            int deletedArrows = getWritableDbTask().deleteTask(ids[0]);
+            int deletedRows = getWritableDbTask().deleteTask(ids[0]);
             close();
-            return deletedArrows;
+            return deletedRows;
         }
     }
 

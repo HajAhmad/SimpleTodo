@@ -135,8 +135,10 @@ public class MainActivity extends AppCompatActivity {
 
     private void removeItemFromList(long taskId) {
         new DbAsyncOps.GetTask(this, task -> {
-            if (isItemForCurrentList(task))
-                mAdapter.removeItemsById(taskId);
+            new DbAsyncOps.DeleteTask(this, effectedRow -> {
+                if (isItemForCurrentList(task))
+                    mAdapter.removeItemsById(taskId);
+            }).execute(taskId);
         }).execute(taskId);
     }
 
@@ -179,7 +181,7 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onImportantActionClicked(long taskId, boolean isImportant,
-                                                 int itemPosition) {
+                    int itemPosition) {
                 if (isImportant) {
                     new DbAsyncOps.InsertImportantTask(MainActivity.this, insertedId -> {
                         mAdapter.changeItemImportance(itemPosition, true);
