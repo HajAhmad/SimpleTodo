@@ -11,7 +11,7 @@ public final class DbAsyncOps {
     private DbAsyncOps() {
     }
 
-    public static class GetAllTaskList extends BaseAsyncTask<Void, Void, List<Task>> {
+    public static class GetAllTaskList extends BaseAsyncTask<Void, List<Task>> {
         public GetAllTaskList(Context context, OnFinishListener<List<Task>> listener) {
             super(context, listener);
         }
@@ -26,7 +26,7 @@ public final class DbAsyncOps {
         }
     }
 
-    public static class GetTasksCount extends BaseAsyncTask<Void, Void, Long> {
+    public static class GetTasksCount extends BaseAsyncTask<Void, Long> {
         public GetTasksCount(Context context, OnFinishListener<Long> listener) {
             super(context, listener);
         }
@@ -39,7 +39,7 @@ public final class DbAsyncOps {
         }
     }
 
-    public static class GetAllDoneTaskList extends BaseAsyncTask<Void, Void, List<Task>> {
+    public static class GetAllDoneTaskList extends BaseAsyncTask<Void, List<Task>> {
         public GetAllDoneTaskList(Context context, OnFinishListener<List<Task>> listener) {
             super(context, listener);
         }
@@ -52,7 +52,7 @@ public final class DbAsyncOps {
         }
     }
 
-    public static class GetAllActiveTaskList extends BaseAsyncTask<Void, Void, List<Task>> {
+    public static class GetAllActiveTaskList extends BaseAsyncTask<Void, List<Task>> {
         public GetAllActiveTaskList(Context context, OnFinishListener<List<Task>> list) {
             super(context, list);
         }
@@ -65,7 +65,7 @@ public final class DbAsyncOps {
         }
     }
 
-    public static class GetTask extends BaseAsyncTask<Long, Void, Task> {
+    public static class GetTask extends BaseAsyncTask<Long, Task> {
         public GetTask(Context context, OnFinishListener<Task> listener) {
             super(context, listener);
         }
@@ -78,7 +78,7 @@ public final class DbAsyncOps {
         }
     }
 
-    public static class InsertTask extends BaseAsyncTask<Task, Void, Long> {
+    public static class InsertTask extends BaseAsyncTask<Task, Long> {
         public InsertTask(Context context, OnFinishListener<Long> listener) {
             super(context, listener);
         }
@@ -91,7 +91,7 @@ public final class DbAsyncOps {
         }
     }
 
-    public static class DeleteTask extends BaseAsyncTask<Long, Void, Integer> {
+    public static class DeleteTask extends BaseAsyncTask<Long, Integer> {
         public DeleteTask(Context context, OnFinishListener<Integer> listener) {
             super(context, listener);
         }
@@ -104,7 +104,7 @@ public final class DbAsyncOps {
         }
     }
 
-    public static class UpdateTask extends BaseAsyncTask<Task, Void, Integer> {
+    public static class UpdateTask extends BaseAsyncTask<Task, Integer> {
         public UpdateTask(Context context, OnFinishListener<Integer> listener) {
             super(context, listener);
         }
@@ -118,7 +118,7 @@ public final class DbAsyncOps {
 
     }
 
-    public static class InsertImportantTask extends BaseAsyncTask<Long, Void, Long> {
+    public static class InsertImportantTask extends BaseAsyncTask<Long, Long> {
         public InsertImportantTask(Context context) {
             super(context);
         }
@@ -136,7 +136,7 @@ public final class DbAsyncOps {
 
     }
 
-    public static class DeleteImportantTask extends BaseAsyncTask<Long, Void, Integer> {
+    public static class DeleteImportantTask extends BaseAsyncTask<Long, Integer> {
         public DeleteImportantTask(Context context) {
             super(context);
         }
@@ -153,7 +153,7 @@ public final class DbAsyncOps {
         }
     }
 
-    public static class IsTaskImportant extends BaseAsyncTask<Long, Void, Boolean> {
+    public static class IsTaskImportant extends BaseAsyncTask<Long, Boolean> {
         public IsTaskImportant(Context context, OnFinishListener<Boolean> listener) {
             super(context, listener);
         }
@@ -166,7 +166,7 @@ public final class DbAsyncOps {
         }
     }
 
-    public static class GetAllImportantTaskList extends BaseAsyncTask<Void, Void, List<Task>> {
+    public static class GetAllImportantTaskList extends BaseAsyncTask<Void, List<Task>> {
         public GetAllImportantTaskList(Context context, OnFinishListener<List<Task>> listener) {
             super(context, listener);
         }

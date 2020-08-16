@@ -227,21 +227,21 @@ public class MainActivity extends AppCompatActivity {
 
     private void updateTaskInList(long updatedTaskId) {
         new DbAsyncOps.GetTask(this, task -> {
-            if (!isItemForCurrentList(task)) return;
-            new DbAsyncOps.IsTaskImportant(this, isImportant -> {
-                task.setImportant(isImportant);
-                mAdapter.setItemAt(mAdapter.getItemPositionById(updatedTaskId), task);
-            }).execute(updatedTaskId);
+            if (isItemForCurrentList(task)) {
+                new DbAsyncOps.IsTaskImportant(this, isImportant -> {
+                    task.setImportant(isImportant);
+                    mAdapter.setItemAt(mAdapter.getItemPositionById(updatedTaskId), task);
+                }).execute(updatedTaskId);
+            }
         }).execute(updatedTaskId);
     }
 
     private boolean isItemForCurrentList(Task task) {
         if (listDisplayStatus == DISPLAY_ALL ||
-                listDisplayStatus == DISPLAY_IMPORTANTS && task.isImportant() ||
-                listDisplayStatus == DISPLAY_DONE && task.getStatus() ==
-                        STATUS_DONE ||
-                listDisplayStatus == DISPLAY_ACTIVES && task.getStatus() ==
-                        STATUS_ACTIVE) {
+                (listDisplayStatus == DISPLAY_IMPORTANTS && task.isImportant()) ||
+                (listDisplayStatus == DISPLAY_DONE && task.getStatus() == STATUS_DONE) ||
+                (listDisplayStatus == DISPLAY_ACTIVES && task.getStatus() == STATUS_ACTIVE)
+        ) {
             return true;
         } else {
             removeItemFromListIfExists(task);

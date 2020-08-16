@@ -5,7 +5,7 @@ import android.os.AsyncTask;
 
 import java.lang.ref.WeakReference;
 
-abstract class BaseAsyncTask<Param, Progress, Result> extends AsyncTask<Param, Progress, Result> {
+abstract class BaseAsyncTask<Param, Result> extends AsyncTask<Param, Void, Result> {
     private WeakReference<Context> mContextReference;
     private DbTask mDbInstance;
     private OnFinishListener<Result> mListener;
